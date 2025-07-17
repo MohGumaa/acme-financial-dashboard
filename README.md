@@ -20,13 +20,8 @@ The following is the folder structure for this Next.js app:
 
 ```bash
 src/
-├── assets/          # Images and static files
-├── components/      # Reusable UI components (e.g. Navbar, Footer)
-├── pages/           # Route-level components (e.g. Home, About, Models)
-├── routes/          # Optional custom routing logic
-├── App.tsx          # Root component with route definitions
-├── main.tsx         # Main entry point
-└── index.css        # TailwindCSS and base styles
+├── app/    # Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
+├── public/ # Contains all the static assets for your application, such as images.
 ```
 
 ## 🌟 Features
