@@ -2,18 +2,23 @@ type InvoiceEditProps = {
   params: Promise<{id: string}>
 }
 
+import { notFound } from 'next/navigation';
 import Form from '@/app/ui/invoices/edit-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 
 
-const InvoiceEdit = async ({params}: InvoiceEditProps) => {
+const EditInvoicePage = async ({params}: InvoiceEditProps) => {
   const {id} = await params;
 
   const [invoice, customers] =  await Promise.all([
     fetchInvoiceById(id),
     fetchCustomers()
-  ])
+  ]);
+
+  if (!invoice) {
+    notFound();
+  }
 
   return (
     <main>
@@ -32,4 +37,4 @@ const InvoiceEdit = async ({params}: InvoiceEditProps) => {
   )
 }
 
-export default InvoiceEdit
+export default EditInvoicePage;

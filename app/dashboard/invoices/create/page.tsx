@@ -2,7 +2,7 @@ import Form from '@/app/ui/invoices/create-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';
 
-const CreatePage = async () => {
+const CreateInvoicePage = async () => {
   const customers = await fetchCustomers();
   
   return (
@@ -22,4 +22,4 @@ const CreatePage = async () => {
   )
 }
 
-export default CreatePage
+export default CreateInvoicePage
