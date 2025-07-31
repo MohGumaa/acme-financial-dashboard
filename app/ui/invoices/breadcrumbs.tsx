@@ -34,3 +34,25 @@ export default function Breadcrumbs({
     </nav>
   );
 }
+
+// 🧪 Bonus: File Placement Convention (suggested structure)
+// app/
+//   invoices/
+//     [id]/
+//       edit/
+//         page.tsx              → EditInvoicePage
+//         error.tsx             → InvoiceEditErrorPage
+//         not-found.tsx         → InvoiceEditNotFoundPage
+//       page.tsx                → InvoiceDetailPage
+//     new/
+//       page.tsx                → NewInvoicePage
+//     page.tsx                  → InvoicesPage
+
+// components/
+//   InvoiceEditForm.tsx
+//   InvoiceTable.tsx
+//   UserAvatar.tsx
+
+// hooks/
+//   useInvoiceForm.ts
+//   useDebouncedValue.ts
